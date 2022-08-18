@@ -6,7 +6,7 @@ const endpoint = 'https://vesta-list.vercel.app/api/keep/link'
 
 
 chrome.contextMenus.create({
-    title: "Save this url to Vesta",
+    title: "Save url to Vesta",
     id: "vesta",
     contexts: ["page"],
 });
