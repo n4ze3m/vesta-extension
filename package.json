@@ -1,0 +1,53 @@
+{
+  "name": "vesta-extension",
+  "displayName": "Vesta",
+  "version": "0.0.1",
+  "description": "Modern browser extension for keeping your notes and bookmark links easy to use and find",
+  "author": "n4ze3m",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build"
+  },
+  "dependencies": {
+    "@mantine/core": "^4.2.12",
+    "@mantine/hooks": "^4.2.12",
+    "@plasmohq/storage": "^0.6.4",
+    "graphql": "^16.5.0",
+    "graphql-request": "^4.3.0",
+    "plasmo": "0.45.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-query": "^3.39.1",
+    "react-router-dom": "^6.3.0"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "3.2.0",
+    "@types/chrome": "0.0.190",
+    "@types/node": "17.0.43",
+    "@types/react": "18.0.12",
+    "@types/react-dom": "18.0.5",
+    "prettier": "2.7.0",
+    "typescript": "4.7.4"
+  },
+  "manifest": {
+    "host_permissions": [
+      "https://*/*"
+    ],
+    "permissions": [
+      "tabs",
+      "storage",
+      "activeTab",
+      "scripting",
+      "contextMenus"
+    ],
+    "externally_connectable": {
+      "ids": [
+        "*"
+      ],
+      "matches": [
+        "http://localhost:3000/settings",
+        "https://vesta-list.vercel.app/settings"
+      ]
+    }
+  }
+}
